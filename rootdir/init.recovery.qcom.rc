@@ -2,3 +2,16 @@ on init
 
     write /sys/class/android_usb/android0/idVendor 0fce
     write /sys/class/android_usb/android0/idProduct 6182
+    
+    # Enable and configure intelli thermal
+    write /sys/module/msm_thermal_v2/parameters/enabled Y
+    write /sys/module/msm_thermal_v2/core_control/enabled 1 
+    write /sys/module/msm_thermal_v2/parameters/core_limit_temp_degC 65
+    write /sys/module/msm_thermal_v2/parameters/limit_temp_degC 70
+    write /sys/module/msm_thermal_v2/parameters/poll_ms 250
+    write /sys/module/msm_thermal_v2/vdd_restriction/enabled 0
+    write /sys/module/msm_thermal_v2/parameters/core_control_mask 12
+    write /sys/module/msm_thermal_v2/parameters/freq_control_mask 15
+
+    # Enable intelli_plug
+    write /sys/kernel/intelli_plug/intelli_plug_active 1

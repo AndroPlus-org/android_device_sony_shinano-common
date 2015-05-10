@@ -1,0 +1,16 @@
+# mount point	fstype	device			[device2]   fstype2
+
+/boot		emmc	/dev/block/platform/msm_sdcc.1/by-name/boot	flags=backup=1;display="Boot "Kernel""
+/system		ext4	/dev/block/platform/msm_sdcc.1/by-name/system
+/cache		ext4	/dev/block/platform/msm_sdcc.1/by-name/cache
+/data		ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata	 length=-16384
+/external_sd    vfat    /dev/block/mmcblk1p1    /dev/block/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg        vfat    /dev/block/sda1         /dev/block/sda      flags=display="USB OTG";storage;wipeingui;removable
+
+/ta		emmc	/dev/block/platform/msm_sdcc.1/by-name/TA	flags=backup=1;display="TA "Trim-Area""
+/LTALabel	ext4	/dev/block/platform/msm_sdcc.1/by-name/LTALabel	 flags=backup=1;display="Certificates info"
+/fsg		emmc	/dev/block/platform/msm_sdcc.1/by-name/fsg	flags=backup=1;display="fsg "Baseband""
+/modemst1	emmc	/dev/block/platform/msm_sdcc.1/by-name/modemst1	flags=backup=1;display="modemst1 "Baseband""
+/modemst2	emmc	/dev/block/platform/msm_sdcc.1/by-name/modemst2	flags=backup=1;display="modemst2 "Baseband""
+
+/FOTAKernel	emmc	/dev/block/platform/msm_sdcc.1/by-name/FOTAKernel	flags=backup=1;display="FOTAKernel"
